@@ -43,7 +43,7 @@ body {
 
 .text h1 {
   font-size: clamp(1.2rem, 4vw, 1.8rem);
-  margin-top: -25vh;
+  margin: 5px 0;
   font-weight: bold;
 }
 
