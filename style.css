@@ -1,0 +1,477 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom,rgb(114, 226, 137), #004d40);
+  color: white;
+  text-align: center;
+}
+
+#particles-js {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  padding: 5px 0;
+  box-sizing: border-box;
+  min-height: calc(100vh - 100px);
+}
+
+.content-wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.text {
+  margin-top: 10vh;
+}
+
+.text h1 {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.text h2 {
+  font-size: clamp(1rem, 4vw, 1.4rem);
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.text h2 span {
+  color:rgb(198, 31, 25);
+  text-shadow: 0 0 10px rgba(255, 235, 59, 0.7);
+}
+
+.text p {
+  font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+  margin: 5px 0;
+  line-height: 1.3;
+}
+
+.text a {
+  display: inline-block;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  font-weight: bold;
+  color: #ffeb3b;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  margin: 5px 0;
+}
+
+.text a:hover {
+  background: #ffeb3b;
+  color: #004d40;
+  transform: scale(1.05);
+}
+
+.countdown {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  width: 100%;
+  max-width: 500px;
+  align-self: center;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.timer-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 8px;
+  border-radius: 8px;
+  text-align: center;
+  width: 60px;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  transition: 0.3s ease-in-out;
+}
+
+.timer-box:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.timer-box span:first-child {
+  display: block;
+  font-size: 0.65rem;
+}
+
+.section {
+  text-align: center;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.section-title {
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  font-weight: bold;
+  color: #ffeb3b;
+  text-shadow: 0 0 10px rgba(255, 235, 59, 0.7);
+  margin: 5px 0;
+}
+
+.teachers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.teacher {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  width: 80px;
+}
+
+.teacher:hover {
+  transform: scale(1.05);
+}
+
+.teacher img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+  border: 2px solid #ffeb3b;
+}
+
+.teacher-name {
+  margin-top: 5px;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  font-weight: bold;
+}
+
+.masjid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url(masjid.png);
+  background-repeat: repeat-x;
+  background-size: 800px;
+  z-index: 1;
+  opacity: 0.5;
+  pointer-events: none;
+  animation: animasinya 20s linear infinite;
+}
+
+@keyframes animasinya {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 800px;
+  }
+}
+
+.masjid:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: url(masjid.png);
+  background-repeat: repeat-x;
+  background-size: 1000px;
+  z-index: 1;
+  opacity: 0.2;
+  pointer-events: none;
+  animation: animasiMundur 40s linear infinite;
+}
+
+@keyframes animasiMundur {
+  0% {
+    background-position: 1000px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 0.65rem;
+  color: #fff;
+  z-index: 10;
+}
+
+.footer p {
+  margin: 3px 0;
+  font-weight: bold;
+}
+
+.footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: rgb(209, 217, 169);
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 3px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  padding: 3px 6px;
+  border-radius: 3px;
+  transition: 0.2s ease-in-out;
+}
+
+.footer-socials i {
+  font-size: 0.8rem;
+}
+
+.facebook {
+  color: #1877f2;
+}
+
+.instagram {
+  color: #e1306c;
+}
+
+.tiktok {
+  color: #222;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 4px;
+}
+
+.youtube {
+  color: #ff0000;
+}
+
+/* Media Queries untuk Responsif */
+@media (min-width: 768px) {
+  .content-wrapper {
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .text h1 {
+    font-size: 1.5rem;
+  }
+
+  .text h2 {
+    font-size: 1.3rem;
+  }
+
+  .text p {
+    font-size: 0.9rem;
+  }
+
+  .text a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .countdown {
+    margin: 8px 0;
+    padding: 10px;
+    max-width: 450px;
+  }
+
+  .timer-box {
+    min-width: 60px;
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  .timer-box span:first-child {
+    font-size: 0.7rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+
+  .teacher {
+    width: 90px;
+    padding: 8px;
+  }
+
+  .teacher-name {
+    font-size: 0.8rem;
+  }
+
+  .masjid {
+    height: 100px;
+    background-size: 800px;
+  }
+
+  .masjid:before {
+    height: 150px;
+    background-size: 1000px;
+  }
+
+  .footer {
+    padding: 10px;
+    font-size: 0.75rem;
+  }
+
+  .footer-socials a {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
+
+/* Untuk layar sangat kecil (misal hp dengan tinggi < 600px) */
+@media (max-height: 600px) {
+  .content-wrapper {
+    gap: 5px;
+  }
+
+  .text h1 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .text h2 {
+    font-size: 0.9rem;
+    margin: 3px 0;
+  }
+
+  .text p {
+    font-size: 0.7rem;
+    margin: 2px 0;
+    line-height: 1.2;
+  }
+
+  .teacher {
+    width: 55px;
+    padding: 3px;
+  }
+
+  .masjid {
+    height: 40px;
+  }
+}
+
+/* Tombol Musik */
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: #ffd700; /* Kuning emas */
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  background: #ffc000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .music-btn {
+    width: 36px;
+    height: 36px;
+    top: 15px;
+    right: 15px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .music-btn {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    right: 10px;
+    font-size: 1rem;
+  }
+}
+
+.slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+
+  .slogan-container {
+    text-align: center;
+  }
+
+  .slogan h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 600px) {
+    .slogan h2 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+  }
