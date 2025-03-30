@@ -11,28 +11,13 @@ body {
   color: white;
   text-align: center;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 #particles-js {
-  position: relative;
-  /* flex: 1; */
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  justify-content: center;
+  justify-content: center; /* Pusatkan vertikal */
   align-items: center;
-  width: 100%;
-  /* max-width: 100vw; */
   height: 100vh;
-  /* padding: 5px 0; */
-  padding: 0;
-  box-sizing: border-box;
-  /* min-height: calc(100vh - 100px); */
+  padding-top: 5vh; /* Naikin sedikit */
 }
 
 .content-wrapper {
@@ -49,11 +34,19 @@ body {
   text-align: center;
 }
 
-.text {
-  /* margin-top: 10vh; */
+/* .text {
   margin-top: 0;
   text-align: center;
   max-width: 700px;
+} */
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Pastikan tetap di tengah */
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin-top: -5vh; /* Naikin teks ke atas */
 }
 
 .text h1 {
