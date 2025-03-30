@@ -12,6 +12,12 @@ body {
   text-align: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #particles-js {
   position: relative;
   /* flex: 1; */
@@ -45,7 +51,9 @@ body {
 
 .text {
   /* margin-top: 10vh; */
-  margin-top: 0;
+  margin-top: auto;
+  text-align: center;
+  padding: 10px;
   max-width: 700px;
 }
 
